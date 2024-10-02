@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import appwriteService from "../appwrite/config";
 import { Container, PostCard } from '../components';
+import { Link } from 'react-router-dom';
 
 function Home() {
     const [posts, setPosts] = useState([]);
@@ -44,9 +45,11 @@ function Home() {
                     ))}
                 </div>
                 <div className="text-right mt-8">
-                    <a href="/all-posts" className="text-lg font-bold hover:text-gray-500">
-                        View All Posts ...
-                    </a>
+                    <p className="text-lg font-bold hover:text-gray-500">
+                        <Link to="/all-posts">
+                            View All Posts ...
+                        </Link>
+                    </p>
                 </div>
             </Container>
         </div>
